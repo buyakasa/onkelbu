@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lernen mit Onkel Bu</title>
+<meta name="description" content="Ruhige Lernvideos für Kleinkinder ab 1 Jahr – Farben, Formen & mehr, ohne Reizüberflutung. Neue Folgen jeden Dienstag und Freitag um 17 Uhr auf YouTube.">
+<meta property="og:title" content="Lernen mit Onkel Bu">
+<meta property="og:description" content="Ruhige Lernvideos für Kleinkinder ab 1 Jahr 🌈">
+<meta property="og:image" content="burak.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌈</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --rot:#e63946; --orange:#f7891f; --gelb:#f2c94c; --gruen:#2db84b; --blau:#2878dc; --lila:#9b4fc8; --rosa:#e0559a;
+    --text:#2b2b33; --weich:#5f5f6b; --karte:rgba(255,255,255,.88);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{min-height:100%}
+  body{
+    font-family:"Nunito",system-ui,sans-serif; color:var(--text);
+    background:#e9e9ec url("hintergrund.jpg") center top / cover fixed;
+    display:block; padding:36px 16px 28px; overflow-x:hidden;
+  }
+  /* leichtes Muster: weiche Farbtupfer im Hintergrund */
+  .tupfer{position:fixed; inset:0; pointer-events:none; z-index:0}
+  .tupfer span{position:absolute; border-radius:50%; filter:blur(2px); opacity:.32; animation:schweben 14s ease-in-out infinite alternate}
+  @keyframes schweben{to{transform:translateY(-18px)}}
+  @media (prefers-reduced-motion:reduce){.tupfer span{animation:none}}
+
+  main{margin:0 auto; position:relative; z-index:1; width:100%; max-width:440px; min-width:0; text-align:center}
+  .foto{width:118px;height:118px;border-radius:50%;object-fit:cover;border:5px solid #fff;
+        box-shadow:0 0 0 4px var(--gelb), 0 10px 26px rgba(0,0,0,.18)}
+  .punkte{display:flex; gap:7px; justify-content:center; margin:16px 0 8px}
+  .punkte i{width:13px;height:13px;border-radius:50%;display:block}
+  h1{font-family:"Baloo 2",sans-serif; font-weight:800; font-size:clamp(1.6rem,7.5vw,2.05rem); line-height:1.1; letter-spacing:-.3px}
+  h1 .b{display:inline-block}
+  .unter{margin:10px auto 0; max-width:330px; color:var(--weich); font-size:1rem; line-height:1.4}
+  .termin{display:inline-flex; align-items:center; gap:7px; margin-top:14px; padding:7px 14px; border-radius:999px;
+          background:#fff; font-weight:700; font-size:.92rem; box-shadow:0 3px 10px rgba(0,0,0,.08)}
+
+  nav{display:flex; flex-direction:column; gap:14px; margin-top:26px}
+  .knopf{display:flex; align-items:center; gap:14px; text-decoration:none; color:var(--text);
+         background:var(--karte); border-radius:20px; padding:14px 18px; border-left:8px solid var(--f);
+         box-shadow:0 6px 18px rgba(0,0,0,.09); transition:transform .15s, box-shadow .15s; text-align:left}
+  .knopf:hover{transform:translateY(-2px) rotate(-.4deg); box-shadow:0 10px 24px rgba(0,0,0,.14)}
+  .knopf:active{transform:scale(.98)}
+  .knopf .emo{font-size:1.65rem; width:46px; height:46px; display:grid; place-items:center; border-radius:14px;
+              background:color-mix(in srgb, var(--f) 18%, #fff); flex:none}
+  .knopf b{display:block; font-family:"Baloo 2",sans-serif; font-weight:800; font-size:1.18rem; line-height:1.1}
+  .knopf small{display:block; color:var(--weich); font-size:.88rem; margin-top:2px}
+  .knopf .pfeil{margin-left:auto; font-size:1.2rem; color:var(--f); font-weight:800}
+
+  .knopf.gross{background:linear-gradient(135deg,#ff4b4b,#e0263a); color:#fff; border-left:none; padding:18px 20px}
+  .knopf.gross .emo{background:rgba(255,255,255,.22)}
+  .knopf.gross small{color:rgba(255,255,255,.92)}
+  .knopf.gross .pfeil{color:#fff}
+  .knopf.gross b{font-size:1.32rem}
+
+  .hinweis{margin-top:26px; background:var(--karte); border-radius:18px; padding:14px 16px; font-size:.92rem; color:var(--weich); line-height:1.45}
+  .hinweis strong{color:var(--text)}
+  .at{display:inline-block; margin-top:5px; font-size:.78rem; font-weight:700; letter-spacing:.2px; color:var(--weich); opacity:.8}
+  .knopf.gross .at{color:rgba(255,255,255,.85)}
+  .hinweis b{display:block; font-family:"Baloo 2",sans-serif; font-size:1.05rem; color:var(--text); margin-bottom:4px}
+  footer{margin-top:20px; font-size:.8rem; color:var(--weich)}
+</style>
+</head>
+<body>
+<div class="tupfer" aria-hidden="true">
+  <span style="width:90px;height:90px;background:var(--rot);top:7%;left:-20px"></span>
+  <span style="width:60px;height:60px;background:var(--gelb);top:18%;right:6%;animation-delay:-3s"></span>
+  <span style="width:110px;height:110px;background:var(--blau);top:46%;left:-40px;animation-delay:-6s"></span>
+  <span style="width:70px;height:70px;background:var(--gruen);top:62%;right:-14px;animation-delay:-2s"></span>
+  <span style="width:50px;height:50px;background:var(--lila);top:84%;left:12%;animation-delay:-8s"></span>
+  <span style="width:80px;height:80px;background:var(--rosa);top:90%;right:14%;animation-delay:-4s"></span>
+  <span style="width:40px;height:40px;background:var(--orange);top:33%;left:20%;animation-delay:-10s"></span>
+</div>
+
+<main>
+  <img class="foto" src="burak.jpg" alt="Onkel Bu" width="118" height="118">
+  <div class="punkte" aria-hidden="true">
+    <i style="background:var(--rot)"></i><i style="background:var(--orange)"></i><i style="background:var(--gelb)"></i><i style="background:var(--gruen)"></i><i style="background:var(--blau)"></i><i style="background:var(--lila)"></i><i style="background:var(--rosa)"></i>
+  </div>
+  <h1>Lernen mit <span class="b">Onkel Bu</span> 🌈</h1>
+  <p class="unter">Ruhige Lernvideos für Kleinkinder ab 1 Jahr – ohne Blinken, ohne Lärm, mit echter Stimme.</p>
+  <span class="termin">🗓️ Neue Folgen Di + Fr um 17 Uhr</span>
+
+  <nav>
+    <a class="knopf gross" style="--f:#e0263a" href="https://www.youtube.com/@LernenmitOnkelBu?sub_confirmation=1">
+      <span class="emo">▶️</span>
+      <span><b>Alle Folgen auf YouTube</b><small>Farben, Formen & mehr – ganz in Ruhe</small><span class="at">@LernenmitOnkelBu</span></span>
+      <span class="pfeil">→</span>
+    </a>
+    <a class="knopf" style="--f:var(--rosa)" href="https://www.instagram.com/heyonkelbu/">
+      <span class="emo">📸</span>
+      <span><b>Instagram</b><small>Kurze Clips & Tipps für Eltern</small><span class="at">@heyonkelbu</span></span>
+      <span class="pfeil">→</span>
+    </a>
+    <a class="knopf" style="--f:var(--blau)" href="https://www.tiktok.com/@onkel_bu">
+      <span class="emo">🎵</span>
+      <span><b>TikTok</b><small>Kurze ruhige Clips</small><span class="at">@onkel_bu</span></span>
+      <span class="pfeil">→</span>
+    </a>
+    <a class="knopf" style="--f:var(--orange)" href="https://de.pinterest.com/heyonkelbu/">
+      <span class="emo">📌</span>
+      <span><b>Pinterest</b><small>Ideen zum Entdecken im Alltag</small><span class="at">@heyonkelbu</span></span>
+      <span class="pfeil">→</span>
+    </a>
+  </nav>
+
+  <p class="hinweis"><b>💡 Gut zu wissen</b>Kleinkinder lernen am besten mit Ruhe und Wiederholung. Deshalb gibt es bei Onkel Bu keine schnellen Schnitte und kein Blinken – sondern Zeit zum Schauen, Staunen und Nachsprechen. Am schönsten: gemeinsam schauen und danach im Alltag suchen. 🔍</p>
+  <footer>Mit 💛 gemacht von einem Papa</footer>
+</main>
+</body>
+</html>
