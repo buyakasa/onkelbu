@@ -88,22 +88,22 @@
   <span class="termin">🗓️ Neue Folgen Di + Fr um 16 Uhr</span>
 
   <nav>
-    <a class="knopf gross" style="--f:#e0263a" href="https://www.youtube.com/@LernenmitOnkelBu?sub_confirmation=1">
+    <a class="knopf gross" style="--f:#e0263a" data-z="youtube" href="https://www.youtube.com/@LernenmitOnkelBu?sub_confirmation=1">
       <span class="emo">▶️</span>
       <span><b>Alle Folgen auf YouTube</b><small>Farben, Formen & mehr – ganz in Ruhe</small><span class="at">@LernenmitOnkelBu</span></span>
       <span class="pfeil">→</span>
     </a>
-    <a class="knopf" style="--f:var(--rosa)" href="https://www.instagram.com/heyonkelbu/">
+    <a class="knopf" style="--f:var(--rosa)" data-z="instagram" href="https://www.instagram.com/heyonkelbu/">
       <span class="emo">📸</span>
       <span><b>Instagram</b><small>Kurze Clips & Tipps für Eltern</small><span class="at">@heyonkelbu</span></span>
       <span class="pfeil">→</span>
     </a>
-    <a class="knopf" style="--f:var(--blau)" href="https://www.tiktok.com/@onkel_bu">
+    <a class="knopf" style="--f:var(--blau)" data-z="tiktok" href="https://www.tiktok.com/@onkel_bu">
       <span class="emo">🎵</span>
       <span><b>TikTok</b><small>Kurze ruhige Clips</small><span class="at">@onkel_bu</span></span>
       <span class="pfeil">→</span>
     </a>
-    <a class="knopf" style="--f:var(--orange)" href="https://de.pinterest.com/heyonkelbu/">
+    <a class="knopf" style="--f:var(--orange)" data-z="pinterest" href="https://de.pinterest.com/heyonkelbu/">
       <span class="emo">📌</span>
       <span><b>Pinterest</b><small>Ideen zum Entdecken im Alltag</small><span class="at">@heyonkelbu</span></span>
       <span class="pfeil">→</span>
@@ -113,5 +113,26 @@
   <p class="hinweis"><b>💡 Gut zu wissen</b>Kleinkinder lernen am besten mit Ruhe und Wiederholung. Deshalb gibt es bei Onkel Bu keine schnellen Schnitte und kein Blinken – sondern Zeit zum Schauen, Staunen und Nachsprechen. Am schönsten: gemeinsam schauen und danach im Alltag suchen. 🔍</p>
   <footer>Mit 💛 gemacht von einem Papa</footer>
 </main>
+<script>
+/* Unsichtbarer Zaehler (18.11.2026): zaehlt nur Aufrufe, Herkunfts-App und Klicks. Keine Cookies.
+   Auswerten: python zaehler_lesen.py (im Ordner Onkel-Bu). Eigene Besuche nicht zaehlen: Seite einmal mit ?intern oeffnen. */
+(function(){
+  var B='https://hits.sh/buyakasa.github.io/onkelbu-z/';
+  try{ if(location.search.indexOf('intern')>-1) localStorage.setItem('ob-intern','1');
+       if(localStorage.getItem('ob-intern')) return; }catch(e){}
+  function z(k){ try{ fetch(B+k+'.svg',{mode:'no-cors',keepalive:true,cache:'no-store'}); }catch(e){} }
+  var ua=navigator.userAgent, r=document.referrer||'', q='direkt';
+  if(/Instagram/i.test(ua)||/instagram\./.test(r)) q='instagram';
+  else if(/musical_ly|TikTok|BytedanceWebview/i.test(ua)||/tiktok\./.test(r)) q='tiktok';
+  else if(/FBAN|FBAV|FB_IAB/i.test(ua)||/facebook\.|fb\.com/.test(r)) q='facebook';
+  else if(/Pinterest/i.test(ua)||/pinterest\./.test(r)) q='pinterest';
+  else if(/youtube\.|youtu\.be/.test(r)) q='youtube';
+  else if(r) q='andere';
+  z('aufruf'); z('quelle-'+q);
+  document.querySelectorAll('a[data-z]').forEach(function(a){
+    a.addEventListener('click',function(){ z('klick-'+a.getAttribute('data-z')); });
+  });
+})();
+</script>
 </body>
 </html>
